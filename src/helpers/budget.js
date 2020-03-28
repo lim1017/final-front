@@ -13,7 +13,7 @@ const monthName = [
   "DEC"
 ];
 
-const budgetCalc = function(budget) {
+export const budgetCalc = function(budget) {
   let result = parseInt(0);
 
   if (budget.income) result += parseInt(budget.income);
@@ -31,7 +31,7 @@ const budgetCalc = function(budget) {
 };
 
 
-const expensesCalc = function(expenses) {
+export const expensesCalc = function(expenses) {
   let result = parseInt(0);
 
   for (const expense of expenses) {
@@ -41,7 +41,7 @@ const expensesCalc = function(expenses) {
   return result;
 };
 
-const budgetCalcPortfolio = function(def, inc, port, period) {
+export const budgetCalcPortfolio = function(def, inc, port, period) {
   const monthly = Math.pow(port, 1 / 12);
   let start = def;
   let end = 0;
@@ -56,7 +56,7 @@ const budgetCalcPortfolio = function(def, inc, port, period) {
   return Math.floor(end);
 };
 
-const budgetSetGraphData = function(budget, range, port, goal) {
+export const budgetSetGraphData = function(budget, range, port, goal) {
   let data = [];
   let goalCheck = [];
   for (const g of goal) {
@@ -121,7 +121,7 @@ const budgetSetGraphData = function(budget, range, port, goal) {
   return {data, goalCheck};
 };
 
-const findUserBudget = function(state, id) {
+export const findUserBudget = function(state, id) {
   let result = {
     id: 0,
     user_id: 0,
@@ -148,10 +148,10 @@ const findUserBudget = function(state, id) {
   return result;
 };
 
-module.exports = {
-  // budgetCalc,
-  budgetCalcPortfolio,
-  budgetSetGraphData,
-  findUserBudget,
-  expensesCalc
-};
+// module.exports = {
+//   // budgetCalc,
+//   budgetCalcPortfolio,
+//   budgetSetGraphData,
+//   findUserBudget,
+//   expensesCalc
+// };
