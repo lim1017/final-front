@@ -41,7 +41,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/welcome" render={props => <WelcomeLayout {...props} />} />
+      <Route path="/" render={props => <WelcomeLayout {...props} />} />
 
       <PrivateRoute
         path="/admin/"

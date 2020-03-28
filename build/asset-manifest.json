@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.4258486e.chunk.css",
-    "main.js": "/static/js/main.bc59c36f.chunk.js",
-    "main.js.map": "/static/js/main.bc59c36f.chunk.js.map",
+    "main.css": "/static/css/main.c456fca3.chunk.css",
+    "main.js": "/static/js/main.7fedc9fd.chunk.js",
+    "main.js.map": "/static/js/main.7fedc9fd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e26822eb.js",
     "runtime-main.js.map": "/static/js/runtime-main.e26822eb.js.map",
-    "static/css/2.da7d9a44.chunk.css": "/static/css/2.da7d9a44.chunk.css",
-    "static/js/2.791d9c9d.chunk.js": "/static/js/2.791d9c9d.chunk.js",
-    "static/js/2.791d9c9d.chunk.js.map": "/static/js/2.791d9c9d.chunk.js.map",
+    "static/css/2.1319fd0b.chunk.css": "/static/css/2.1319fd0b.chunk.css",
+    "static/js/2.fa956ccf.chunk.js": "/static/js/2.fa956ccf.chunk.js",
+    "static/js/2.fa956ccf.chunk.js.map": "/static/js/2.fa956ccf.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0fac5d538de638e1717fceb158c59518.js": "/precache-manifest.0fac5d538de638e1717fceb158c59518.js",
+    "precache-manifest.cc001aff3b45133914e712660f3f9456.js": "/precache-manifest.cc001aff3b45133914e712660f3f9456.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.da7d9a44.chunk.css.map": "/static/css/2.da7d9a44.chunk.css.map",
-    "static/css/main.4258486e.chunk.css.map": "/static/css/main.4258486e.chunk.css.map",
-    "static/js/2.791d9c9d.chunk.js.LICENSE.txt": "/static/js/2.791d9c9d.chunk.js.LICENSE.txt",
-    "static/js/main.bc59c36f.chunk.js.LICENSE.txt": "/static/js/main.bc59c36f.chunk.js.LICENSE.txt",
+    "static/css/2.1319fd0b.chunk.css.map": "/static/css/2.1319fd0b.chunk.css.map",
+    "static/css/main.c456fca3.chunk.css.map": "/static/css/main.c456fca3.chunk.css.map",
+    "static/js/2.fa956ccf.chunk.js.LICENSE.txt": "/static/js/2.fa956ccf.chunk.js.LICENSE.txt",
+    "static/js/main.7fedc9fd.chunk.js.LICENSE.txt": "/static/js/main.7fedc9fd.chunk.js.LICENSE.txt",
     "static/media/light-bootstrap-dashboard-react.scss?v=1.3.0": "/static/media/Banff.311c40ab.jpg",
     "static/media/index.scss": "/static/media/Xi'an.b57d634f.jpg",
     "static/media/pe-icon-7-stroke.css": "/static/media/Pe-icon-7-stroke.c45f7de0.svg",
@@ -27,9 +27,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e26822eb.js",
-    "static/css/2.da7d9a44.chunk.css",
-    "static/js/2.791d9c9d.chunk.js",
-    "static/css/main.4258486e.chunk.css",
-    "static/js/main.bc59c36f.chunk.js"
+    "static/css/2.1319fd0b.chunk.css",
+    "static/js/2.fa956ccf.chunk.js",
+    "static/css/main.c456fca3.chunk.css",
+    "static/js/main.7fedc9fd.chunk.js"
   ]
 }
