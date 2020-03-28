@@ -9,7 +9,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
-import { budgetCalc } from "helpers/budget";
+// import { budgetCalc } from "helpers/budget";
 import MUButton from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
@@ -34,6 +34,23 @@ export default function BudgetPlannerA(props) {
     color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)",
     x: 0
   });
+
+  const budgetCalc = function(budget) {
+    let result = parseInt(0);
+  
+    if (budget.income) result += parseInt(budget.income);
+  
+    if (budget.c_hous) result -= parseInt(budget.c_hous);
+    if (budget.c_tran) result -= parseInt(budget.c_tran);
+    if (budget.c_food) result -= parseInt(budget.c_food);
+    if (budget.c_util) result -= parseInt(budget.c_util);
+    if (budget.c_entr) result -= parseInt(budget.c_entr);
+    if (budget.c_medi) result -= parseInt(budget.c_medi);
+    if (budget.c_debt) result -= parseInt(budget.c_debt);
+    if (budget.c_misc) result -= parseInt(budget.c_misc);
+  
+    return result;
+  };
 
   const style = {
     background: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)",
