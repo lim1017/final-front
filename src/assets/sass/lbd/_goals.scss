@@ -1,0 +1,216 @@
+.goal {
+  // width: 96%;
+  margin: 0 0 20px;
+  border: solid;
+  border-radius: 10px;
+  // border-color: #ffe7ea;
+  margin-bottom: 10px;
+
+  .header {
+    padding: 5px 10px;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    grid-template-rows: auto auto;
+  }
+
+  .title {
+    margin: $none;
+    color: #e7e7e7;
+    font-weight: $font-weight-bold;
+    padding: 5px;
+  }
+
+  .icons {
+    text-align: right;
+    font-size: 20px;
+
+    .icon {
+      &:hover {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: none;
+  }
+
+  .description {
+    padding: 5px 10px;
+    display: none;
+  }
+}
+
+.goalClick {
+  // border-color: #ffe7ea;
+
+  .content {
+    display: block;
+  }
+
+  .description {
+    display: block;
+  }
+}
+
+.goalForm {
+  // width: 96%;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid;
+  // border-color: #ffe7ea;
+  margin-bottom: 10px;
+
+  .goalWrapper {
+    background-color: #e7e7e7;
+    color: #272727;
+    padding: 5px 10px;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    grid-template-rows: auto auto auto 50px;
+  }
+
+  .inputName {
+    font-size: 20px;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    height: 35px;
+    // border-color: #ffe7ea;
+    border-radius: 10px;
+    resize: none;
+    background: none;
+  }
+
+  .inputDescription {
+    font-size: 20px;
+    width: 100%;
+    // border-color: #ffe7ea;
+    border-radius: 10px;
+    resize: none;
+    background: none;
+  }
+
+  .inputAmount {
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+    // border-color: #ffe7ea;
+    border-radius: 10px;
+    resize: none;
+    background: none;
+    overflow: hidden;
+  }
+
+  .icons {
+    text-align: right;
+    font-size: 20px;
+
+    .icon {
+      &:hover {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    font-size: 16px;
+    padding: 0px;
+    grid-column: 1/3;
+    grid-row: 2/3;
+
+    .flex {
+      display: flex;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .width200 {
+        width: 200px;
+      }
+    }
+  }
+
+  .errorMessage {
+    position: relative;
+    text-align: right;
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+
+  .buttons {
+    position: relative;
+    height: 50px;
+    text-align: right;
+    grid-column: 1/3;
+    grid-row: 4/5;
+
+    .button {
+      border-radius: 10px;
+      margin: 5px;
+    }
+  }
+}
+
+.goalNew {
+  // width: 96%;
+  border: solid;
+  border-radius: 10px;
+  // border-color: #e7e7e7;
+  margin-bottom: 10px;
+
+  .icons {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 50px;
+
+    .icon {
+      &:hover {
+        font-size: 55px;
+      }
+    }
+  }
+}
+
+.goals-button-image-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.goals-background-image {
+  background: url("../../img/Nepal.jpg");
+  background-size: cover;
+}
+
+.goalCard {
+  background: #272727;
+  color: #e7e7e7;
+}
+
+.goal-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.goal-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.goal-text {
+  color: #e7e7e7;
+  font-size: 3rem;
+}
+.MuiGrid-grid-xs-12.MuiGrid-item {
+  margin: 15px;
+}
+
+.MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-formControl.MuiInput-formControl {
+  color: #e7e7e7;
+}

@@ -1,0 +1,18 @@
+.youtube-review-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/img/Nepal.jpg");
+  background-size: cover;
+  min-width: 100%;
+}
+.youtube-video-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.youtube-button {
+  background-color: #ffe7ea;
+  border-color: black;
+  border-radius: 10px;
+}

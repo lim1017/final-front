@@ -1,0 +1,132 @@
+.addExpenseDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#exp-table-header {
+  display: flex;
+}
+
+.exp-question-span {
+  background-color: black;
+  margin-left: 1em;
+}
+
+.add-1expense-div {
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+}
+
+#add-expense-id {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.inside-1expense-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.file-upload {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1rem;
+}
+
+.select-btn {
+  margin-right: 15px;
+}
+
+.content-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.content1 {
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  padding-top: 2rem;
+  line-height: 0px;
+}
+
+.expcard2 {
+  background-color: red;
+}
+
+.contentExpenses1 {
+  width: 100%;
+  background: url("../../img/NewYork.jpg");
+  background-size: cover;
+  background-position: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1.5fr 1.5fr;
+}
+
+.expenses-table1 {
+  display: grid;
+  grid-column: 1/3;
+  grid-row: 1;
+  opacity: 0.97;
+  padding-top: 3rem;
+
+  margin: auto;
+}
+
+.expenses-table2 {
+  display: grid;
+  grid-column: 1;
+  grid-row: 2;
+  width: 80%;
+  margin: auto;
+
+  max-height: 450px;
+  padding-bottom: 5rem;
+}
+
+.expenses-table3 {
+  display: grid;
+  grid-column: 2;
+  grid-row: 2;
+  width: 80%;
+  margin: auto;
+  max-height: 450px;
+  padding-bottom: 5rem;
+}
+
+.mdb {
+  width: 60em;
+}
+
+.MuiCard-root {
+  padding-bottom: 3rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.pagination .page-item.active.page-link {
+  background-color: red;
+  color: red;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: red;
+}
+
+.table-wrapper-scroll-y {
+  margin-bottom: 2rem;
+}
+
+.dataTables_info {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
