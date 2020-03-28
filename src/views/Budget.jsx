@@ -20,7 +20,7 @@ import BudgetPlannerB from "components/Budget/BudgetPlannerB";
 import BudgetGoals from "components/Budget/BudgetGoals";
 import BudgetInputMenu from "components/Budget/BudgetInputMenu";
 import BudgetChartMenu from "components/Budget/BudgetChartMenu";
-import { budgetSetGraphData, findUserBudget, budgetCalc } from "helpers/budget";
+import { budgetSetGraphData, findUserBudget } from "helpers/budget";
 import useWindowDimensions from "helpers/windowDimensions";
 
 import MonthPicker from "components/MonthPicker/MonthPicker.jsx";
@@ -43,6 +43,23 @@ import {
 /* Budget Function */
 /* --------------- */
 function Budget(props) {
+
+  const budgetCalc = function(budget) {
+    let result = parseInt(0);
+  
+    if (budget.income) result += parseInt(budget.income);
+  
+    if (budget.c_hous) result -= parseInt(budget.c_hous);
+    if (budget.c_tran) result -= parseInt(budget.c_tran);
+    if (budget.c_food) result -= parseInt(budget.c_food);
+    if (budget.c_util) result -= parseInt(budget.c_util);
+    if (budget.c_entr) result -= parseInt(budget.c_entr);
+    if (budget.c_medi) result -= parseInt(budget.c_medi);
+    if (budget.c_debt) result -= parseInt(budget.c_debt);
+    if (budget.c_misc) result -= parseInt(budget.c_misc);
+  
+    return result;
+  };
   /* ------------------ */
   /* States & Variables */
   /* ------------------ */
