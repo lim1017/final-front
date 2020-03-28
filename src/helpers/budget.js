@@ -13,6 +13,22 @@ const monthName = [
   "DEC"
 ];
 
+const budgetCalc = function(budget) {
+  let result = parseInt(0);
+
+  if (budget.income) result += parseInt(budget.income);
+
+  if (budget.c_hous) result -= parseInt(budget.c_hous);
+  if (budget.c_tran) result -= parseInt(budget.c_tran);
+  if (budget.c_food) result -= parseInt(budget.c_food);
+  if (budget.c_util) result -= parseInt(budget.c_util);
+  if (budget.c_entr) result -= parseInt(budget.c_entr);
+  if (budget.c_medi) result -= parseInt(budget.c_medi);
+  if (budget.c_debt) result -= parseInt(budget.c_debt);
+  if (budget.c_misc) result -= parseInt(budget.c_misc);
+
+  return result;
+};
 
 
 const expensesCalc = function(expenses) {
