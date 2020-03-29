@@ -64,8 +64,9 @@ function Login(props) {
   }
 
   function register() {
+    console.log('register')
     Promise.all([
-      axios.put(`api/account/register`, { username })
+      axios.put(`/api/account/register`, { username })
     ])
       .then(response => {
         if (response[0].status === 200) {
