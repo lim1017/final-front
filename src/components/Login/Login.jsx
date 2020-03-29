@@ -46,7 +46,7 @@ function Login(props) {
   }
 
   function login() {
-    Promise.all([axios.get(`http://localhost:8001/api/account/${username}`)])
+    Promise.all([axios.get(`/api/account/${username}`)])
       .then(response => {
         if (response[0].data.length === 0) {
           setUserExists(false);
@@ -65,7 +65,7 @@ function Login(props) {
 
   function register() {
     Promise.all([
-      axios.put(`http://localhost:8001/api/account/register`, { username })
+      axios.put(`api/account/register`, { username })
     ])
       .then(response => {
         if (response[0].status === 200) {
