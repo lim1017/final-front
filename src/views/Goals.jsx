@@ -21,10 +21,10 @@ function Goals(props) {
 
     return new Promise((res, rej) => {
       axios
-        .put(`http://localhost:8001/api/goals/${id}`, { goal, scoreUp })
+        .put(`/api/goals/${id}`, { goal, scoreUp })
         .then(x => {
           axios
-            .get(`http://localhost:8001/api/goals/${user}`)
+            .get(`/api/goals/${user}`)
             .then(res2 => {
               dispatch({
                 ...state,
@@ -34,7 +34,7 @@ function Goals(props) {
               res(res2);
 
               axios
-                .get(`http://localhost:8001/api/users/${user}`)
+                .get(`/api/users/${user}`)
                 .then(res2 => {
                   dispatch({
                     type: SET_USER,
@@ -54,9 +54,9 @@ function Goals(props) {
     const user = localStorage.getItem("id");
     return new Promise((res, rej) => {
       axios
-        .delete(`http://localhost:8001/api/goals/${id}`)
+        .delete(`/api/goals/${id}`)
         .then(res1 => {
-          axios.get(`http://localhost:8001/api/goals/${user}`).then(res2 => {
+          axios.get(`/api/goals/${user}`).then(res2 => {
 
             dispatch({
               ...state,

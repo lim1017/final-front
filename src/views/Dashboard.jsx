@@ -18,7 +18,7 @@ function Dashboard(props) {
   useEffect(() => {
   
     Promise.all([
-      axios.get(`http://localhost:8001/api/users/${userId}`)
+      axios.get(`/api/users/${userId}`)
     ])
       .then(response => {
         setIsUserNew(response[0].data[0].isnew)
@@ -32,7 +32,7 @@ function Dashboard(props) {
 
   function isOldUser(){
     Promise.all([
-        axios.put(`http://localhost:8001/api/users/update/newuser`, {userId})
+        axios.put(`/api/users/update/newuser`, {userId})
       ])
         .then(response => {
           setIsUserNew(false)

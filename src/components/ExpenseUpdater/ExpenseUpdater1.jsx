@@ -71,13 +71,13 @@ function ExpenseUpdater1(props) {
     }
 
     Promise.all([
-      axios.put(`http://localhost:8001/api/expenses/add`, {
+      axios.put(`/api/expenses/add`, {
         expenseObj,
         scoreUp
       })
     ])
       .then(response => {
-        axios.get(`http://localhost:8001/api/users/${userId}`).then(resz => {
+        axios.get(`/api/users/${userId}`).then(resz => {
           props.doDispatch(props.state.date, resz.data);
         });
       })

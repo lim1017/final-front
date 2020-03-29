@@ -148,11 +148,11 @@ function Budget(props) {
     let datez = `${state.date.month}+${state.date.year}+${user}`;
 
     Promise.all([
-      axios.get(`http://localhost:8001/api/expenses/${datez}`),
-      axios.get(`http://localhost:8001/api/expensestotal/${datez}`),
-      axios.get(`http://localhost:8001/api/budget/${user}`),
-      axios.get(`http://localhost:8001/api/goals/${user}`),
-      axios.get(`http://localhost:8001/api/users/${user}`)
+      axios.get(`/api/expenses/${datez}`),
+      axios.get(`/api/expensestotal/${datez}`),
+      axios.get(`/api/budget/${user}`),
+      axios.get(`/api/goals/${user}`),
+      axios.get(`/api/users/${user}`)
     ])
       .then(response => {
         dispatch({
@@ -202,8 +202,8 @@ function Budget(props) {
     let datez = `${date.month}+${date.year}+${user}`;
 
     Promise.all([
-      axios.get(`http://localhost:8001/api/expenses/${datez}`),
-      axios.get(`http://localhost:8001/api/expensestotal/${datez}`)
+      axios.get(`/api/expenses/${datez}`),
+      axios.get(`/api/expensestotal/${datez}`)
     ])
       .then(response => {
         dispatch({
@@ -225,9 +225,9 @@ function Budget(props) {
     };
 
     axios
-      .put(`http://localhost:8001/api/budget/${user}`, newBud)
+      .put(`/api/budget/${user}`, newBud)
       .then(res1 => {
-        axios.get(`http://localhost:8001/api/budget/${user}`).then(res2 => {
+        axios.get(`/api/budget/${user}`).then(res2 => {
           dispatch({
             ...state,
             type: "SET_DATA",
@@ -248,13 +248,13 @@ function Budget(props) {
     const userId = localStorage.getItem("id");
 
     Promise.all([
-      axios.put(`http://localhost:8001/api/users/updateliteracy`, {
+      axios.put(`/api/users/updateliteracy`, {
         userId,
         lit: 25
       })
     ])
       .then(res => {
-        axios.get(`http://localhost:8001/api/users/${userId}`).then(resz => {
+        axios.get(`/api/users/${userId}`).then(resz => {
           dispatch({
             type: "SET_USER",
             users: resz.data

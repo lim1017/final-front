@@ -53,11 +53,11 @@ export default function useAppData() {
     let datez = `${state.date.month}+${state.date.year}+${user}`;
 
     Promise.all([
-      axios.get(`http://localhost:8001/api/expenses/${datez}`),
-      axios.get(`http://localhost:8001/api/expensestotal/${datez}`),
-      axios.get(`http://localhost:8001/api/budget/${user}`),
-      axios.get(`http://localhost:8001/api/goals/${user}`),
-      axios.get(`http://localhost:8001/api/users/${user}`)
+      axios.get(`/api/expenses/${datez}`),
+      axios.get(`/api/expensestotal/${datez}`),
+      axios.get(`/api/budget/${user}`),
+      axios.get(`/api/goals/${user}`),
+      axios.get(`/api/users/${user}`)
     ])
       .then(response => {
         dispatch({

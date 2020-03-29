@@ -45,7 +45,7 @@ function Maps({ ...prop }) {
   useEffect(() => {
     const userId = localStorage.getItem("id");
 
-    Promise.all([axios.get(`http://localhost:8001/api/users/${userId}`)])
+    Promise.all([axios.get(`/api/users/${userId}`)])
       .then(response => {
         setAllAnswers(response[0].data[0].eduscores);
         setAnswerYet(response[0].data[0].eduisanswered);
@@ -60,13 +60,13 @@ function Maps({ ...prop }) {
     const userId = localStorage.getItem("id");
 
     Promise.all([
-      axios.put(`http://localhost:8001/api/users/updateliteracy`, {
+      axios.put(`/api/users/updateliteracy`, {
         userId,
         lit: 5
       })
     ])
       .then(res => {
-        axios.get(`http://localhost:8001/api/users/${userId}`).then(resz => {
+        axios.get(`/api/users/${userId}`).then(resz => {
           dispatch({
             type: SET_USER,
             users: resz.data
@@ -94,7 +94,7 @@ function Maps({ ...prop }) {
       const eduUpdate = { eduscores: isCorrect, userId: userId };
 
       Promise.all([
-        axios.put(`http://localhost:8001/api//users/updateedu`, eduUpdate)
+        axios.put(`/api//users/updateedu`, eduUpdate)
       ])
         .then(response => {
           if (allAnswers[id] === 0) {

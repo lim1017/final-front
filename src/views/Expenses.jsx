@@ -80,8 +80,8 @@ function Dashboard(props) {
     let datez = `${date.month}+${date.year}+${userz}`;
 
     Promise.all([
-      axios.get(`http://localhost:8001/api/expenses/${datez}`),
-      axios.get(`http://localhost:8001/api/expensestotal/${datez}`)
+      axios.get(`/api/expenses/${datez}`),
+      axios.get(`/api/expensestotal/${datez}`)
     ])
       .then(response => {
         dispatch({
@@ -123,7 +123,7 @@ function Dashboard(props) {
       reader.onloadend = e => {
         const textData = e.target.result;
         axios
-          .post("http://localhost:8001/api/expenses/file/", {
+          .post("/api/expenses/file/", {
             textData,
             userId,
             date: state.date,
@@ -131,7 +131,7 @@ function Dashboard(props) {
           })
           .then(res => {
             axios
-              .get(`http://localhost:8001/api/users/${userId}`)
+              .get(`/api/users/${userId}`)
               .then(resz => {
                 dispatch({
                   type: SET_USER,
@@ -176,8 +176,8 @@ function Dashboard(props) {
     let datez = `${date.month}+${date.year}+${userz}`;
 
     Promise.all([
-      axios.get(`http://localhost:8001/api/expenses/${datez}`),
-      axios.get(`http://localhost:8001/api/expensestotal/${datez}`)
+      axios.get(`/api/expenses/${datez}`),
+      axios.get(`/api/expensestotal/${datez}`)
     ])
       .then(response => {
         dispatch({

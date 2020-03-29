@@ -161,7 +161,7 @@ function Portfolio(props) {
     });
 
     Promise.all([
-      axios.put(`http://localhost:8001/api/users/update`, {
+      axios.put(`/api/users/update`, {
         userPortfolio,
         scoreUp
       })
@@ -172,7 +172,7 @@ function Portfolio(props) {
         type: SET_DATA
       });
 
-      axios.get(`http://localhost:8001/api/users/${userid}`).then(resz => {
+      axios.get(`/api/users/${userid}`).then(resz => {
         dispatch({
           type: SET_USER,
           users: resz.data
