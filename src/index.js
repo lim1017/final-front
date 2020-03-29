@@ -38,8 +38,12 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 
 ReactDOM.render(
   <BrowserRouter>
+    {localStorage.getItem("id") ===null ? <Redirect to="/welcome" /> : <Redirect to="/welcome" /> }
+
+
     <Switch>
-      <Route path="/" render={props => <WelcomeLayout {...props} />} />
+
+      <Route path="/welcome" render={props => <WelcomeLayout {...props} />} />
 
       <PrivateRoute
         path="/admin/"
