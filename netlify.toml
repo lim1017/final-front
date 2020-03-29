@@ -13,4 +13,5 @@
 
 [build.environment]
   REACT_APP_API_BASE_URL = "https://thepiggybankdb.herokuapp.com/"
-  
+  REACT_APP_WEBSOCKET_URL = "wss://scheduler-lhl.herokuapp.com/"
+

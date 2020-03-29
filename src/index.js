@@ -11,11 +11,9 @@ import "./assets/css/pe-icon-7-stroke.css";
 import "./views/index.scss";
 
 import 'mdbreact/dist/css/mdb.css';
-
-
-
 import AdminLayout from "layouts/Admin.jsx";
 import WelcomeLayout from "layouts/Welcome.jsx";
+
 
 import axios from "axios";
 
@@ -23,7 +21,7 @@ if (process.env.REACT_APP_API_BASE_URL) {
   axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
 }
 
-
+console.log(process.env.REACT_APP_API_BASE_URL, 'process')
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
