@@ -38,7 +38,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 
 ReactDOM.render(
   <HashRouter>
-    {localStorage.getItem("id") ===null ? <Redirect to="/welcome" /> : <Redirect to="/welcome" /> }
 
 
     <Switch>
@@ -47,7 +46,9 @@ ReactDOM.render(
         path="/admin/"
         render={props => <AdminLayout {...props} />}
       />
-      
+          
+      {localStorage.getItem("id") === null ? <Redirect to="/welcome" /> : <Redirect to="/welcome" /> }
+
       <Route path="/welcome" render={props => <WelcomeLayout {...props} />} />
 
       
