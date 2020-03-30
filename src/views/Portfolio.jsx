@@ -108,10 +108,8 @@ function Portfolio(props) {
 
   useEffect(() => {
     if (state.users[0].riskscore >= 1) {
-      // window.location.href = "/admin/portfolio/review";
-      <Switch>
-        <Redirect to="/admin/portfolio/review" />
-      </Switch>
+      window.location.href = "#/admin/portfolio/review";
+      
     }
   }, []);
 
