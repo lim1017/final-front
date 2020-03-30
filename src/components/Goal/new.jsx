@@ -55,7 +55,8 @@ export default function New(props) {
               x: 5
             })
           }
-         onClick={props.onEdit}>
+         onClick={props.onEdit}
+         >
            Create a Goal
         </MUButton>
         
