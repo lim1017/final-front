@@ -181,7 +181,7 @@ function Portfolio(props) {
       });
 
       // force redirect
-      window.location.href = "/admin/portfolio/review";
+      window.location.href = "#/admin/portfolio/review";
     });
   }
 
