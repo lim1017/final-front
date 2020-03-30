@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { BrowserRouter, Route, Switch, Redirect, browserHistory } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/animate.min.css";
@@ -37,7 +37,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 );
 
 ReactDOM.render(
-  <BrowserRouter history={browserHistory}>
+  <HashRouter>
     {localStorage.getItem("id") ===null ? <Redirect to="/welcome" /> : <Redirect to="/welcome" /> }
 
 
@@ -53,6 +53,6 @@ ReactDOM.render(
     
 
     </Switch>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById("root")
 );
