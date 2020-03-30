@@ -1,11 +1,10 @@
 
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import NotificationSystem from "react-notification-system";
 import appDataContext from "../hooks/reducers/useContext";
 import useAppData from "../hooks/useAppData";
 import Sidebar from "components/Sidebar/Sidebar";
-import { style } from "variables/Variables.jsx";
+
 import routes from "routes.js";
 import image from "assets/img/sidebar-5.jpg";
 
