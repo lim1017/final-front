@@ -58,7 +58,7 @@ export default function New(props) {
          onClick={props.onEdit}>
            Create a Goal
         </MUButton>
-        </div>
+        
       </div>
     </article>
   );
