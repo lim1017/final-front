@@ -200,7 +200,8 @@ function CardGoalsTips(props) {
           style={{
             ...style,
             background: button1.color,
-            marginLeft: button1.x
+            marginLeft: '0.5em',
+            fontSize: '11px'
           }}
           onMouseLeave={() =>
             setButton1({
@@ -234,7 +235,7 @@ function CardGoalsTips(props) {
           style={{
             ...style,
             background: button2.color,
-            marginLeft: button2.x,
+            marginLeft: '0.5em',
             fontSize: '11px'
 
           }}
@@ -271,8 +272,8 @@ function CardGoalsTips(props) {
           style={{
             ...style,
             background: button3.color,
-            marginLeft: button3.x,
-            fontSize: '10px'
+            marginLeft: '0.5em',
+            fontSize: '11px'
           }}
           onMouseLeave={() =>
             setButton3({
@@ -307,8 +308,8 @@ function CardGoalsTips(props) {
           style={{
             ...style,
             background: button4.color,
-            marginLeft: button4.x,
-            fontSize: '12px'
+            marginLeft: '0.5em',
+            fontSize: '11px'
 
           }}
           onMouseLeave={() =>
