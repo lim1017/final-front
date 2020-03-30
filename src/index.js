@@ -54,11 +54,11 @@ ReactDOM.render(
 
       
  
-    
+      {localStorage.getItem("id") === null ? <Redirect to="/welcome" /> : <Redirect to="/welcome" /> }
+
 
     </Switch>
 
-    {localStorage.getItem("id") === null ? <Redirect to="/welcome" /> : <Redirect to="/welcome" /> }
 
 
   </HashRouter>,
