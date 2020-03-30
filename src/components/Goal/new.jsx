@@ -22,14 +22,14 @@ export default function New(props) {
   return (
     <article className="goalNew goalCard">
       <div className="icons">
-        <div className="goal-text" >
+        {/* <div className="goal-text" > */}
 
         <MUButton
           style={{
             ...style,
             background: button1.color,
             height: 70 - button1.x,
-            width: 180 - button1.x,
+            width: 250 - button1.x,
             margin: button1.x / 2
           }}
           onMouseLeave={() =>
@@ -59,10 +59,10 @@ export default function New(props) {
           }
          onClick={props.onEdit}
          >
-           Create a Goal
+           Create a Goal!
         </MUButton>
           
-        </div>
+        {/* </div> */}
       </div>
     </article>
   );
