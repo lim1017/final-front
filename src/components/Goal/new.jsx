@@ -20,16 +20,17 @@ export default function New(props) {
 
 
   return (
-    <article className="goalNew goalCard">
-      <div className="icons">
+    // <article className="goalNew goalCard">
+    //   <div className="icons">
         {/* <div className="goal-text" > */}
 
         <MUButton
           style={{
             ...style,
             background: button1.color,
-            height: 100%,
-            width: 100%
+            height: 70 - button1.x,
+            width: 250 - button1.x,
+            margin: button1.x / 2
           }}
           onMouseLeave={() =>
             setButton1({
@@ -62,7 +63,7 @@ export default function New(props) {
         </MUButton>
           
         {/* </div> */}
-      </div>
-    </article>
+    //   </div>
+    // </article>
   );
 }
