@@ -13,7 +13,7 @@ function Welcome(props) {
           <div className="welcome-title-container">
             <div className="welcome-title">
               <div className="welcome-title-text">
-                Invest in You9 | PiggyBank
+                Invest in You10 | PiggyBank
               </div>
             </div>
             <div className="login-box">
