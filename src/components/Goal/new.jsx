@@ -23,7 +23,7 @@ export default function New(props) {
     // <article className="goalNew goalCard">
     //   <div className="icons">
         {/* <div className="goal-text" > */}
-
+<div>
         <MUButton
           style={{
             ...style,
@@ -61,7 +61,7 @@ export default function New(props) {
          >
            Create a Goal!
         </MUButton>
-          
+</div>          
         {/* </div> */}
     //   </div>
     // </article>
