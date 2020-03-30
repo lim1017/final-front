@@ -273,7 +273,7 @@ function CardGoalsTips(props) {
             ...style,
             background: button3.color,
             marginLeft: '0.5em',
-            fontSize: '11px'
+            fontSize: '10px'
           }}
           onMouseLeave={() =>
             setButton3({
