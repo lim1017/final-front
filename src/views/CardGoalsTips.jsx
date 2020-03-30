@@ -1,11 +1,46 @@
 import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
+import MUButton from "@material-ui/core/Button";
+
 
 function CardGoalsTips(props) {
   const [localState, setLocalState] = useState({
     outputTips: 1
   });
+
+
+  //fancy buttons
+  const [button1, setButton1] = useState({
+    color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)",
+    x: 0
+  });
+  const [button2, setButton2] = useState({
+    color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)",
+    x: 0
+  });
+  const [button3, setButton3] = useState({
+    color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)",
+    x: 0
+  });
+  const [button4, setButton4] = useState({
+    color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)",
+    x: 0
+  });
+
+  const style = {
+    background: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)",
+    borderRadius: 3,
+    border: 0,
+    color: "white",
+    height: 40,
+    width: 105,
+    padding: "0 30px",
+    boxShadow: "0 3px 5px 2px #4a148c 30%",
+    marginLeft: 0
+  };
+
+
 
   return (
     <Grid item xs={12}>
@@ -161,30 +196,149 @@ function CardGoalsTips(props) {
         )}
 
         <div className="goals-buttons-container">
-          <button
+          <MUButton
+          style={{
+            ...style,
+            background: button1.color,
+            width: 105 - button1.x,
+            marginLeft: button1.x
+          }}
+          onMouseLeave={() =>
+            setButton1({
+              ...button1,
+              color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)"
+            })
+          }
+          onMouseOver={() =>
+            setButton1({
+              ...button1,
+              color: "linear-gradient(45deg, #f06292 30%, #f8bbd0 90%)"
+            })
+          }
+          onMouseUp={() =>
+            setButton1({
+              ...button1,
+              x: 0
+            })
+          }
+          onMouseDown={() =>
+            setButton1({
+              ...button1,
+              x: 2
+            })
+          }
             onClick={() => setLocalState({ outputTips: 1 })}
-            className="goals-button"
           >
             How To Save Money - Top Saving Tips
-          </button>
-          <button
+          </MUButton>
+          <MUButton
+          style={{
+            ...style,
+            background: button1.color,
+            width: 105 - button1.x,
+            marginLeft: button1.x
+          }}
+          onMouseLeave={() =>
+            setButton2({
+              ...button1,
+              color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)"
+            })
+          }
+          onMouseOver={() =>
+            setButton2({
+              ...button1,
+              color: "linear-gradient(45deg, #f06292 30%, #f8bbd0 90%)"
+            })
+          }
+          onMouseUp={() =>
+            setButton2({
+              ...button1,
+              x: 0
+            })
+          }
+          onMouseDown={() =>
+            setButton2({
+              ...button1,
+              x: 2
+            })
+          }
             onClick={() => setLocalState({ outputTips: 2 })}
             className="goals-button"
           >
             How to Save for a House
-          </button>
-          <button
+          </MUButton>
+          <MUButton
+          style={{
+            ...style,
+            background: button1.color,
+            width: 105 - button1.x,
+            marginLeft: button1.x
+          }}
+          onMouseLeave={() =>
+            setButton3({
+              ...button1,
+              color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)"
+            })
+          }
+          onMouseOver={() =>
+            setButton3({
+              ...button1,
+              color: "linear-gradient(45deg, #f06292 30%, #f8bbd0 90%)"
+            })
+          }
+          onMouseUp={() =>
+            setButton3({
+              ...button1,
+              x: 0
+            })
+          }
+          onMouseDown={() =>
+            setButton3({
+              ...button1,
+              x: 2
+            })
+          }
             onClick={() => setLocalState({ outputTips: 3 })}
             className="goals-button"
           >
             The Ultimate Guide to Money Management
-          </button>
-          <button
+          </MUButton>
+          <MUButton
+          style={{
+            ...style,
+            background: button1.color,
+            width: 105 - button1.x,
+            marginLeft: button1.x
+          }}
+          onMouseLeave={() =>
+            setButton4({
+              ...button1,
+              color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)"
+            })
+          }
+          onMouseOver={() =>
+            setButton4({
+              ...button1,
+              color: "linear-gradient(45deg, #f06292 30%, #f8bbd0 90%)"
+            })
+          }
+          onMouseUp={() =>
+            setButton4({
+              ...button1,
+              x: 0
+            })
+          }
+          onMouseDown={() =>
+            setButton4({
+              ...button1,
+              x: 2
+            })
+          }
             onClick={() => setLocalState({ outputTips: 4 })}
             className="goals-button"
           >
             How to Retire Early
-          </button>
+          </MUButton>
         </div>
       </div>
     </Grid>
