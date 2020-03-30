@@ -49,10 +49,11 @@ ReactDOM.render(
         path="/admin/"
         render={props => <AdminLayout {...props} />}
       />
-      {/* <Route
-        path="/admin/dashboard"
+ 
+      <PrivateRoute
         render={props => <AdminLayout {...props} />}
-      /> */}
+      />
+
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
