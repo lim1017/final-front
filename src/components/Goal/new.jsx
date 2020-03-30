@@ -28,9 +28,8 @@ export default function New(props) {
           style={{
             ...style,
             background: button1.color,
-            height: 70 - button1.x,
-            width: 250 - button1.x,
-            margin: button1.x / 2
+            height: 100%,
+            width: 100%
           }}
           onMouseLeave={() =>
             setButton1({
