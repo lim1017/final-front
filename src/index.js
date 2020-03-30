@@ -50,7 +50,7 @@ ReactDOM.render(
         render={props => <AdminLayout {...props} />}
       />
  
-      <PrivateRoute
+      <Route
         render={props => <AdminLayout {...props} />}
       />
 
