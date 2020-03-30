@@ -79,6 +79,8 @@ function ExpenseUpdater1(props) {
       .then(response => {
         axios.get(`/api/users/${userId}`).then(resz => {
           props.doDispatch(props.state.date, resz.data);
+          props.toggleAddExpState()        
+
         });
       })
       .catch(error => {

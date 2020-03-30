@@ -152,7 +152,7 @@ function Dashboard(props) {
     }
   }
 
-  function toggleState() {
+  function toggleAddExpState() {
     setAddExpense(!addExpense);
   }
 
@@ -282,7 +282,7 @@ function Dashboard(props) {
                           x: 2
                         })
                       }
-                      onClick={() => toggleState()}
+                      onClick={() => toggleAddExpState()}
                     >
                       Add an expense
                     </MUButton>
@@ -299,6 +299,7 @@ function Dashboard(props) {
                         state={state}
                         date={state.date}
                         onExpenseSubmit={refreshExpenses}
+                        toggleAddExpState={toggleAddExpState}
                       />
                     ) : null}
                   </div>
