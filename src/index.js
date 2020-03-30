@@ -43,12 +43,14 @@ ReactDOM.render(
 
     <Switch>
 
-      <Route path="/welcome" render={props => <WelcomeLayout {...props} />} />
-
       <PrivateRoute
         path="/admin/"
         render={props => <AdminLayout {...props} />}
       />
+      
+      <Route path="/welcome" render={props => <WelcomeLayout {...props} />} />
+
+      
  
     
 
