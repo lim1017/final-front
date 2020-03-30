@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect, browserHistory } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/animate.min.css";
@@ -37,7 +37,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 );
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter history={browserHistory}>
     {localStorage.getItem("id") ===null ? <Redirect to="/welcome" /> : <Redirect to="/welcome" /> }
 
 
@@ -50,9 +50,7 @@ ReactDOM.render(
         render={props => <AdminLayout {...props} />}
       />
  
-      <Route
-        render={props => <AdminLayout {...props} />}
-      />
+    
 
     </Switch>
   </BrowserRouter>,
