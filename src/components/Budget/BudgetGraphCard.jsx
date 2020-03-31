@@ -86,7 +86,7 @@ export const BudgetGraphCard = function(props) {
           {sc.aCheck >= 0 && sc.aCheck < 600 ? (
             <p className='power-of-investing-text2'> 
               Your goal can be met{" "}
-              <span className="greenText">with no investing</span> by{" "}
+              <span className="yellowText">with no investing</span> by{" "} 
               {`${sc.ax.split(" ")[1]} ${sc.ax.split(" ")[2]}`}.
             </p>
           ) : null}

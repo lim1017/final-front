@@ -343,7 +343,13 @@ function Dashboard(props) {
                         />
                       ))}
                     </Pie>
-                    <Legend verticalAlign="bottom" height={45} width={350} />
+                     <Legend 
+                    verticalAlign="bottom"
+                    layout="horizontal"
+                    height={20}
+                    width={400}
+                    textColor="#e7e7e7"
+                  />
                   </PieChart>
                 </ResponsiveContainer>
               </Card>
