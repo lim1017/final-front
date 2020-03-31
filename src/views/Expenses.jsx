@@ -320,7 +320,9 @@ function Dashboard(props) {
                 <h4 style={{ textAlign: "center" }}>
                   Expense Breakdown By Type (in $)
                 </h4>
-                <ResponsiveContainer width="90%" height={350}>
+                {/* <ResponsiveContainer width="90%" height={350}> */}
+                <ResponsiveContainer width={700} height="80%">
+
                   <PieChart width={400} height={350}>
                     <Tooltip
                       itemStyle={{ color: "#e7e7e7" }}
