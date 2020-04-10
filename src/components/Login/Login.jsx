@@ -105,6 +105,7 @@ function Login(props) {
           placeholder="Login"
           className="mr-sm-2"
           onChange={handleChangeName}
+          onSubmit={ () => login() }
         />
 
         {/* <Button
@@ -145,7 +146,7 @@ function Login(props) {
               x: 2
             })
           }
-          onClick={() => login()}
+          // onClick={() => login()}
         >
           Login
         </MUButton>
@@ -159,6 +160,8 @@ function Login(props) {
           placeholder="Register"
           className="mr-sm-2"
           onChange={handleChangeName}
+          onSubmit={ () => register() }
+
         />
 
         <MUButton
@@ -193,7 +196,7 @@ function Login(props) {
               x: 2
             })
           }
-          onClick={() => register()}
+          // onClick={() => register()}
         >
           Register
         </MUButton>
