@@ -45,8 +45,7 @@ function Login(props) {
     setUsername(null);
   }
 
-  function login(e) {
-    e.preventDefault();
+  function login() {
     Promise.all([axios.get(`/api/account/${username}`)])
       .then(response => {
         if (response[0].data.length === 0) {
@@ -64,8 +63,8 @@ function Login(props) {
       });
   }
 
-  function register(e) {
-    e.preventDefault();
+  function register() {
+    console.log('register')
     Promise.all([
       axios.put(`/api/account/register`, { username })
     ])
@@ -106,7 +105,6 @@ function Login(props) {
           placeholder="Login"
           className="mr-sm-2"
           onChange={handleChangeName}
-          onSubmit={login}
         />
 
         {/* <Button
@@ -147,7 +145,7 @@ function Login(props) {
               x: 2
             })
           }
-          // onClick={() => login()}
+          onClick={() => login()}
         >
           Login
         </MUButton>
@@ -161,8 +159,6 @@ function Login(props) {
           placeholder="Register"
           className="mr-sm-2"
           onChange={handleChangeName}
-          onSubmit={register}
-
         />
 
         <MUButton
@@ -197,7 +193,7 @@ function Login(props) {
               x: 2
             })
           }
-          // onClick={() => register()}
+          onClick={() => register()}
         >
           Register
         </MUButton>
