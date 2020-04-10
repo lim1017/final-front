@@ -64,7 +64,7 @@ function Login(props) {
       });
   }
 
-  function register() {
+  function register(e) {
     e.preventDefault();
     Promise.all([
       axios.put(`/api/account/register`, { username })
@@ -106,7 +106,7 @@ function Login(props) {
           placeholder="Login"
           className="mr-sm-2"
           onChange={handleChangeName}
-          onSubmit={ () => login() }
+          onSubmit={login}
         />
 
         {/* <Button
@@ -161,7 +161,7 @@ function Login(props) {
           placeholder="Register"
           className="mr-sm-2"
           onChange={handleChangeName}
-          onSubmit={ () => register() }
+          onSubmit={register}
 
         />
 
