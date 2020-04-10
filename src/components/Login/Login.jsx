@@ -45,7 +45,8 @@ function Login(props) {
     setUsername(null);
   }
 
-  function login() {
+  function login(e) {
+    e.preventDefault();
     Promise.all([axios.get(`/api/account/${username}`)])
       .then(response => {
         if (response[0].data.length === 0) {
@@ -64,7 +65,7 @@ function Login(props) {
   }
 
   function register() {
-    console.log('register')
+    e.preventDefault();
     Promise.all([
       axios.put(`/api/account/register`, { username })
     ])
