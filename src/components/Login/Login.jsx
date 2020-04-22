@@ -102,7 +102,7 @@ function Login(props) {
         <FormControl
           style={{ marginRight: "10px" }}
           type="text"
-          placeholder="Login"
+          placeholder="Login with existing name"
           className="mr-sm-2"
           onChange={handleChangeName}
         />
@@ -156,7 +156,7 @@ function Login(props) {
         <FormControl
           style={{ marginRight: "10px" }}
           type="text"
-          placeholder="Register"
+          placeholder="Enter any name to register"
           className="mr-sm-2"
           onChange={handleChangeName}
         />
