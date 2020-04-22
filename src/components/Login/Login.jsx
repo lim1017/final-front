@@ -100,7 +100,7 @@ function Login(props) {
 
       <Form inline>
         <FormControl
-          style={{ marginRight: "10px", width: '18em' }}
+          style={{ marginRight: "10px", width: '15em', textAlign: `center` }}
           type="text"
           placeholder="Login with existing name"
           className="mr-sm-2"
@@ -154,7 +154,7 @@ function Login(props) {
 
       <Form inline>
         <FormControl
-          style={{ marginRight: "10px", width: '18em' }}
+          style={{ marginRight: "10px", width: '15em', textAlign: `center` }}
           type="text"
           placeholder="Enter any name to register"
           className="mr-sm-2"
