@@ -62,17 +62,9 @@ function Login(props) {
       });
   }
 
-  let config = {
-    headdrs: {
-      "Access-Control-Allow-Origin": "*",
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      "Cache-Control": "max-age=360",
-    },
-  };
   function register() {
     console.log("register");
-    Promise.all([axios.put(`/api/account/register`, { username }, config)])
+    Promise.all([axios.put(`/api/account/register`, { username })])
       .then((response) => {
         if (response[0].status === 200) {
           setUserExistsRegister(true);
