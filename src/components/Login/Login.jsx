@@ -20,11 +20,11 @@ function Login(props) {
 
   const [button1, setButton1] = useState({
     color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)",
-    x: 0
+    x: 0,
   });
   const [button2, setButton2] = useState({
     color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)",
-    x: 0
+    x: 0,
   });
 
   const style = {
@@ -36,9 +36,8 @@ function Login(props) {
     width: 105,
     padding: "0 30px",
     boxShadow: "0 3px 5px 2px #4a148c 30%",
-    marginLeft: 0
+    marginLeft: 0,
   };
-
 
   function logout() {
     localStorage.clear();
@@ -47,7 +46,7 @@ function Login(props) {
 
   function login() {
     Promise.all([axios.get(`/api/account/${username}`)])
-      .then(response => {
+      .then((response) => {
         if (response[0].data.length === 0) {
           setUserExists(false);
         } else {
@@ -58,17 +57,20 @@ function Login(props) {
           setLoggedIn({ name: userz.name, id: userz.id });
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }
 
+  let config = {
+    headdrs: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  };
   function register() {
-    console.log('register')
-    Promise.all([
-      axios.put(`/api/account/register`, { username })
-    ])
-      .then(response => {
+    console.log("register");
+    Promise.all([axios.put(`/api/account/register`, { username }, config)])
+      .then((response) => {
         if (response[0].status === 200) {
           setUserExistsRegister(true);
         } else {
@@ -76,7 +78,7 @@ function Login(props) {
           login();
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }
@@ -100,7 +102,7 @@ function Login(props) {
 
       <Form inline>
         <FormControl
-          style={{ marginRight: "10px", width: '15em', textAlign: `center` }}
+          style={{ marginRight: "10px", width: "15em", textAlign: `center` }}
           type="text"
           placeholder="Login with existing name"
           className="mr-sm-2"
@@ -119,30 +121,30 @@ function Login(props) {
             ...style,
             background: button1.color,
             width: 105 - button1.x,
-            marginLeft: button1.x
+            marginLeft: button1.x,
           }}
           onMouseLeave={() =>
             setButton1({
               ...button1,
-              color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)"
+              color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)",
             })
           }
           onMouseOver={() =>
             setButton1({
               ...button1,
-              color: "linear-gradient(45deg, #f06292 30%, #f8bbd0 90%)"
+              color: "linear-gradient(45deg, #f06292 30%, #f8bbd0 90%)",
             })
           }
           onMouseUp={() =>
             setButton1({
               ...button1,
-              x: 0
+              x: 0,
             })
           }
           onMouseDown={() =>
             setButton1({
               ...button1,
-              x: 2
+              x: 2,
             })
           }
           onClick={() => login()}
@@ -154,7 +156,7 @@ function Login(props) {
 
       <Form inline>
         <FormControl
-          style={{ marginRight: "10px", width: '15em', textAlign: `center` }}
+          style={{ marginRight: "10px", width: "15em", textAlign: `center` }}
           type="text"
           placeholder="Enter any name to register"
           className="mr-sm-2"
@@ -166,31 +168,31 @@ function Login(props) {
             ...style,
             background: button2.color,
             width: 105 - button2.x,
-            marginLeft: button2.x
+            marginLeft: button2.x,
           }}
           onMouseLeave={() =>
             setButton2({
               ...button2,
               color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)",
-              x: 0
+              x: 0,
             })
           }
           onMouseOver={() =>
             setButton2({
               ...button2,
-              color: "linear-gradient(45deg, #f06292 30%, #f8bbd0 90%)"
+              color: "linear-gradient(45deg, #f06292 30%, #f8bbd0 90%)",
             })
           }
           onMouseUp={() =>
             setButton2({
               ...button2,
-              x: 0
+              x: 0,
             })
           }
           onMouseDown={() =>
             setButton2({
               ...button2,
-              x: 2
+              x: 2,
             })
           }
           onClick={() => register()}
