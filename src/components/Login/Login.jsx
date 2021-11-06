@@ -65,6 +65,9 @@ function Login(props) {
   let config = {
     headdrs: {
       "Access-Control-Allow-Origin": "*",
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      "Cache-Control": "max-age=360",
     },
   };
   function register() {
