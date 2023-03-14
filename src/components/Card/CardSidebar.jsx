@@ -3,10 +3,11 @@ import React, { Component } from "react";
 export class CardSidebar extends Component {
   render() {
     return (
-      <div
-        className={"card" + (this.props.plain ? " card-plain" : "")}>
+      <div className={"card" + (this.props.plain ? " card-plain" : "")}>
         <div className={"header" + (this.props.hCenter ? " text-center" : "")}>
-          <h2 className="title">{this.props.title} {this.props.category}</h2>
+          <h2 className="title" style={{ textAlign: "center" }}>
+            {this.props.title} {this.props.category}
+          </h2>
         </div>
         <div
           className={
@@ -22,7 +23,6 @@ export class CardSidebar extends Component {
           <div className="footer">
             {this.props.legend}
             {this.props.stats != null ? <hr /> : ""}
-            
           </div>
         </div>
       </div>

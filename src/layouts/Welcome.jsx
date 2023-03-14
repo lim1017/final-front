@@ -1,5 +1,7 @@
 import React from "react";
 import Login from "components/Login/Login.jsx";
+import { WelcomePaper } from "components/WelcomePaper/WelcomePaper.jsx";
+
 import ReactPlayer from "react-player";
 import myVideo from "../assets/img/WelcomeVideo2.mp4";
 
@@ -16,11 +18,12 @@ function Welcome(props) {
                 Invest in You | PiggyBank
               </div>
             </div>
-            <div className="login-box">
-              <Login />
-            </div>
+            <Login />
           </div>
+
+          <WelcomePaper />
         </div>
+
         <div className="video-wrapper">
           <ReactPlayer
             className="react-player"

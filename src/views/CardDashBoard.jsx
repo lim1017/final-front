@@ -7,6 +7,8 @@ import DashBudget from "./DashBudget";
 import DashExpenses from "./DashExpenses";
 import Goals from "components/Dashboard/DashGoalsTable";
 
+import styled from "styled-components";
+
 import {
   PieChart,
   Pie,
@@ -17,9 +19,23 @@ import {
   XAxis,
   CartesianGrid,
   Tooltip,
-  ResponsiveContainer
+  ResponsiveContainer,
 } from "recharts";
 import { createPie, returnMonthText } from "helpers/expenseHelper";
+
+const StyledCard = styled(Card)`
+  opacity: 0.95;
+  padding: 1.5em;
+  background-color: #272727;
+  color: #e7e7e7;
+  min-height: 400px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1em;
+`;
 
 function CardDashBoard(props) {
   const expenseKey = [
@@ -30,7 +46,7 @@ function CardDashBoard(props) {
     "Transporation",
     "Home",
     "Food",
-    "Utilities"
+    "Utilities",
   ];
   const budgetKey = [
     "c_entr",
@@ -40,7 +56,7 @@ function CardDashBoard(props) {
     "c_tran",
     "c_hous",
     "c_food",
-    "c_util"
+    "c_util",
   ];
 
   const colors = [
@@ -51,9 +67,9 @@ function CardDashBoard(props) {
     "#e5dbff",
     "#FAEEC5",
     "#defafa",
-    "#e7e7e7"
+    "#e7e7e7",
   ];
-  const formatDataForPVAT = function(state) {
+  const formatDataForPVAT = function (state) {
     const Budgeted = { name: "Budgeted" };
     const Actual = { name: "Actual" };
     const result = [];
@@ -76,74 +92,37 @@ function CardDashBoard(props) {
   });
 
   return (
-    <>
+    <div className="dash-container">
       {/* Goals Card */}
-      <div className="dash-card1">
-        <Card
-          style={{
-            width: "500px",
-            maxWidth: 500,
-            minHeight: 500,
-            opacity: 0.95,
-            margin: "auto",
-            marginBottom: 20,
-            marginTop: 20,
-            padding: 20,
-            backgroundColor: "#272727",
-            color: "#e7e7e7"
-          }}
-        >
+      <div className="left-container">
+        <StyledCard>
           {props.state.goals.length === 0 ? (
             <>
               <h1 className="card1-txt">
                 Step 1:
-                <br></br>
-                <br></br>
+                <br />
                 Success is the progressive realization of a worthy goal
               </h1>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <DashGoals></DashGoals>
+
+              <DashGoals />
             </>
           ) : (
-            <div className="dashboard-chart1">
+            <div>
               <h4>My Financial Goals:</h4>
               <Goals state={props.state} />
             </div>
           )}
-        </Card>
-      </div>
-      {/* Budget Goals */}
-      <div className="dash-card4">
-        <Card
-          style={{
-            width: "500px",
-            maxWidth: 500,
-            maxHeight: 500,
-            opacity: 0.95,
-            margin: "auto",
-            marginBottom: 20,
-            marginTop: 20,
-            padding: 20,
-            backgroundColor: "#272727",
-            color: "#e7e7e7"
-          }}
-        >
+        </StyledCard>
+        {/* Budget Goals */}
+        <StyledCard>
           {props.state.budget.length === 0 ? (
             <>
               <h1 className="card1-txt">
-                Step 4:
-                <br></br>
-                <br></br>
+                Step 4: <br />
                 The best way to stick to a budget is to start one
               </h1>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <DashBudget></DashBudget>
+
+              <DashBudget />
             </>
           ) : (
             <div className="dashboard-chart">
@@ -159,116 +138,75 @@ function CardDashBoard(props) {
               >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis stroke="#e7e7e7" dataKey="name" />
-                <Tooltip cursor={{fill: 'transparent'}} contentStyle={{ backgroundColor: "#272727" }} />
+                <Tooltip
+                  cursor={{ fill: "transparent" }}
+                  contentStyle={{ backgroundColor: "#272727" }}
+                />
                 <Legend />
                 {PVATdata}
               </BarChart>
             </div>
           )}
-        </Card>
+        </StyledCard>
       </div>
 
-      <div className="dash-card2">
-        <Card
-          style={{
-            width: "500px",
-            maxWidth: 500,
-            maxHeight: 500,
-            opacity: 0.95,
-            margin: "auto",
-            marginBottom: 20,
-            marginTop: 20,
-            padding: 20,
-            backgroundColor: "#272727",
-            color: "#e7e7e7"
-          }}
-        >
+      <div className="right-container">
+        <StyledCard>
           {props.state.expenses.length === 0 ? (
             <>
               <h1 className="card1-txt">
-                Step 2:
-                <br></br>
-                <br></br>A penny saved is a penny earned
+                Step 2: <br /> A penny saved is a penny earned
               </h1>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <DashExpenses state={props.state}></DashExpenses>
+
+              <DashExpenses state={props.state} />
             </>
           ) : (
-            <ResponsiveContainer width={700} height="80%">
-              <div>
-                <h4>
-                  My Expenses for{" "}
-                  {returnMonthText(parseInt(props.state.date.month))}:
-                </h4>
-                <PieChart width={550} height={350}>
-                  <Tooltip
-                    itemStyle={{ color: "#e7e7e7" }}
-                    contentStyle={{ backgroundColor: "#272727" }}
-                  />
+            <div>
+              <h4>
+                My Expenses for{" "}
+                {returnMonthText(parseInt(props.state.date.month))}:
+              </h4>
+              <PieChart width={550} height={350}>
+                <Tooltip
+                  itemStyle={{ color: "#e7e7e7" }}
+                  contentStyle={{ backgroundColor: "#272727" }}
+                />
 
-                  <Pie
-                    data={createPie(props.state.totalExpenses)}
-                    dataKey="value"
-                    nameKey="name"
-                    cx="41%"
-                    cy="49%"
-                    outerRadius={125}
-                    fill="#8884d8"
-                    label
-                  >
-                    {createPie(props.state.totalExpenses).map(
-                      (entry, index) => (
-                        <Cell
-                          key={index}
-                          fill={colors[index % colors.length]}
-                        />
-                      )
-                    )}
-                  </Pie>
-                  <Legend
-                    verticalAlign="bottom"
-                    layout="horizontal"
-                    height={20}
-                    width={450}
-                    textColor="#e7e7e7"
-                  />
-                </PieChart>
-              </div>
-            </ResponsiveContainer>
+                <Pie
+                  data={createPie(props.state.totalExpenses)}
+                  dataKey="value"
+                  nameKey="name"
+                  cx="41%"
+                  cy="49%"
+                  outerRadius={125}
+                  fill="#8884d8"
+                  label
+                >
+                  {createPie(props.state.totalExpenses).map((entry, index) => (
+                    <Cell key={index} fill={colors[index % colors.length]} />
+                  ))}
+                </Pie>
+                <Legend
+                  verticalAlign="bottom"
+                  layout="horizontal"
+                  height={20}
+                  width={450}
+                  textColor="#e7e7e7"
+                />
+              </PieChart>
+            </div>
           )}
-        </Card>
-      </div>
-      {/* Portfolio Card */}
-      <div className="dash-card3">
-        <Card
-          style={{
-            width: "500px",
-            maxWidth: 500,
-            minHeight: 500,
-            opacity: 0.95,
-            margin: "auto",
-            marginBottom: 20,
-            marginTop: 20,
-            padding: 20,
-            backgroundColor: "#272727",
-            color: "#e7e7e7"
-          }}
-        >
+        </StyledCard>
+        {/* Portfolio Card */}
+        <StyledCard>
           {props.state.users[0].riskscore === 0 ? (
             <>
               <h1 className="card1-txt">
                 Step 3:
-                <br></br>
-                <br></br>
+                <br />
                 Discover the power of compound interest
               </h1>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
+
               <DashPortfolio></DashPortfolio>
             </>
           ) : (
@@ -277,9 +215,9 @@ function CardDashBoard(props) {
             <BriefPortfolio state={props.state}></BriefPortfolio>
             // </ResponsiveContainer>
           )}
-        </Card>
+        </StyledCard>
       </div>
-    </>
+    </div>
   );
 }
 

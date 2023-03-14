@@ -75,10 +75,12 @@
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+  flex-wrap: wrap;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // grid-template-rows: auto;
 }
 .MuiTableRow-root.MuiTableRow-head {
   background: #ffe7ea;
@@ -102,11 +104,24 @@
   max-height: 500px;
 }
 
-.dash-card1 {
-  display: grid;
-  grid-column: 1;
-  grid-row: 1;
+.dash-container {
+  display: flex;
   opacity: 0.97;
+  padding: 3em;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.left-container {
+  flex: 1;
+  box-sizing: border-box;
+  margin-right: 1em;
+}
+
+.right-container {
+  flex: 1;
+  box-sizing: border-box;
+  margin-left: 1em;
 }
 
 .card1-txt {

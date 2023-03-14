@@ -8,11 +8,13 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.9.5",
+    "@material-ui/icons": "^4.11.3",
     "axios": "^0.19.2",
     "babel-jest": "24.9.0",
     "bootstrap": "3.3.7",
     "chartist": "0.10.1",
     "classnames": "^2.2.6",
+    "env-cmd": "^10.1.0",
     "mdbreact": "^4.25.3",
     "node-sass": "^4.13.1",
     "react": "16.8.6",
@@ -32,7 +34,7 @@
     "react-youtube": "^7.9.0",
     "recharts": "^1.8.5",
     "semantic-ui-react": "^0.88.2",
-    "styled-components": "^5.0.1",
+    "styled-components": "^5.3.8",
     "tough-cookie": "^3.0.1",
     "unirest": "^0.6.0"
   },

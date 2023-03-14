@@ -19,6 +19,8 @@ import axios from "axios";
 
 if (process.env.REACT_APP_API_BASE_URL) {
   axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
+} else {
+  axios.defaults.baseURL='https://final-back-production-9d1c.up.railway.app'
 }
 
 console.log(process.env.REACT_APP_API_BASE_URL, 'process')

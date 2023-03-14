@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { formatMoney } from "../../helpers/generalHelpers";
 
 export default function Show(props) {
   const [click, setClick] = useState(false);
@@ -15,14 +16,16 @@ export default function Show(props) {
         return type;
     }
   }
-
+  console.log(props);
   return (
     <article
       className={`goal${click ? " goalClick" : ""} goalCard`}
       onClick={() => setClick(!click)}
     >
       <div className="header">
-        <h4 className="title">{props.name}</h4>
+        <h4 className="title">
+          Name: {props.name} --- Amount: {formatMoney(props.amount)}
+        </h4>
         <div className="icons">
           <i className="icon pe-7s-pen" onClick={props.onEdit} />
           <i className="icon pe-7s-trash" onClick={props.onDelete} />
