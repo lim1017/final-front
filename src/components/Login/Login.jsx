@@ -6,6 +6,7 @@ import axios from "axios";
 import MUButton from "@material-ui/core/Button";
 
 import { Redirect, Route } from "react-router-dom";
+import { useModal, SimpleModal } from "components/Modal/Modal";
 
 // exported function
 function Login(props) {
@@ -21,6 +22,8 @@ function Login(props) {
     error: false,
     button: "",
   });
+
+  const { open, setOpen } = useModal();
 
   const [button1, setButton1] = useState({
     color: "linear-gradient(45deg, #ec407a 30%, #f48fb1 90%)",
@@ -82,6 +85,7 @@ function Login(props) {
       })
       .catch((error) => {
         console.log(error);
+        setOpen(true);
       });
   }
 
@@ -101,6 +105,7 @@ function Login(props) {
       })
       .catch((error) => {
         console.log(error);
+        setOpen(true);
       });
   }
 
@@ -111,6 +116,9 @@ function Login(props) {
 
   return (
     <>
+      <SimpleModal open={open} handleClose={() => setOpen(false)}>
+        Server starting up please wait 10 second and try again
+      </SimpleModal>
       <div className="login-box">
         {loggedIn.id !== null ? (
           <>
